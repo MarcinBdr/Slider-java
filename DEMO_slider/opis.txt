@@ -1,0 +1,81 @@
+
+
+Istniej¹ dwa podstawowe pliki potrzebne aby dodaæ  i w³¹czyæ Slider jQuery, podstawowe wtyczki JavaScript i CSS .
+Trzeba tak¿e upewniæ siê, ¿e najnowsza wersja biblioteki jQuery zawarte na stronie.
+
+<! - Do³¹cz biblioteki jQuery (lokalne lub z Internetu) -> 
+<script src="http://code.jquery.com/jquery-latest.min.js"> </script>
+
+<! - Do³¹cz wtyczki  biblioteki jQuery -> 
+<script src="bjqs-1.3.min.js"> </script>
+
+<! - Do³¹cz podstawowe styl -> 
+<link type="text/css" rel="stylesheet" href="bjqs.css" />
+
+
+
+
+Podstawowa sk³adnia dla wtyczki jest nastêpuj¹ca.
+
+Zewnêtrzny DIV, który zostanie do³¹czony do wtyczki,
+Nieuporz¹dkowana lista elementów z nazw¹ klasy bjqs i
+Poszczególne elementy listy dla ka¿dego slajdu.
+
+------------------------------------------------------------------------
+<div id="banner"> 
+    <ul class="bjqs"> 
+        < li > <! - Wszelkie treœci lubisz -> </ li > 
+        < li > <! - Czy mo¿na wejœæ do œrodka tych slides-- > </ li > 
+    </ ul > 
+</ div >
+------------------------------------------------------------------------
+
+Aktywacja
+
+Ostatnim krokiem jest dodanie pluginu do g³ównego pliku strony (html/php). 
+Nastêpnie w kodzie ustawiæ wymiary g³ównego okna slidera 
+(height – wysokoœæ okna: wartoœæ w px; width – szerokoœæ okna: wartoœæ w px)
+
+--------------------------------------------------------------------
+<script>
+$(function($) { 
+    $('#banner').bjqs({ 
+        height  :  320 , 
+        width  :  620 , 
+        responsive : true 
+    }); 
+});
+</script>
+--------------------------------------------------------------------
+
+
+Opcje
+Oto pe³na lista wszystkich mo¿liwych parametrów, które mog¹ wykorzystywane do konfiguracji wtyczki i ich wartoœci domyœlne.
+
+// Szerokoœæ i wysokoœæ musz¹ byæ dostarczone do egzekwowania zgodnoœci
+ // jeœli reaguje jest ustawiona na true, wartoœci te dzia³aj¹ jako maksymalne wymiary
+width : 700,
+height : 300,
+
+// wartoœci animacji
+animtype :  "Fade" , // akceptuje "znikn¹" lub "slajdów"
+animduration :  450 , // jak szybko animacji s¹
+animspeed :  4000 , // opóŸnienie miêdzy ka¿dego slajdu
+automatic : true, // automatyczne
+
+// Znacznik sterowania i konfiguracji
+showcontrols :  true , // poka¿ nastêpne i prev Kontrola
+centercontrols :  true , // Centrum kontroluje verically
+nexttext :  'Next' , // tekst na przycisk 'Dalej' (mo¿na u¿ywaæ jêzyka HTML)
+prevtext :  'Prev' , // Tekst dla " Przycisk poprzedniego "
+showmarkers :  true, // Poka¿ poszczególnych slajdów znaczniki
+centermarkers :  true, // znaczniki Center poziomo
+
+// wartoœci interakcji
+keyboardnav :  true, // w³¹czyæ klawiaturê nawigacji
+ hoverpause :  true, // wstrzymaæ suwak przy aktywowaniu
+
+// Opcje prezentacyjnych
+usecaptions :  true, // Poka¿ tytu³y do zdjêæ przy u¿yciu obrazu Title tag
+ randomstart :  true, // rozpocz¹æ suwak losowo slajdów
+ reaguje :  true // w³¹czyæ reaguj¹cych mo¿liwoœci (beta)

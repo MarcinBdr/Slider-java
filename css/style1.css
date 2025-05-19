@@ -1,0 +1,132 @@
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.logo span {
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px white;
+}
+
+.logo, .slogan {
+    width: 49%;
+    display: inline-block;
+}
+
+#container {
+    width: 1000px;
+    margin: auto;
+}
+
+.slogan {
+    float: right;
+    text-align: right;
+    margin-top: 0;
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+.slogan a:link, .slogan a:visited, .slogan a:hover {
+    color: white;
+}
+
+.logo {
+    background-image: url("./../images/headerBackground.jpg");
+}
+
+.logo h1 {
+    font-size: 40px;
+}
+
+#header {
+    height: 89px;
+}
+
+#navlist li {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 0px 20px;
+    border-right: 1px solid white;
+    font-size: larger;
+}
+#navlist li#active a {
+    color: yellow;
+}
+
+#navlist li#active {
+    color: yellow;
+    border-left: 1px solid white;
+}
+
+
+#navlist a:hover, #navlist a:link, #navlist a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+#menu ul {
+    padding: 0px;
+    margin: auto;
+}
+
+#menu {
+    background-image: url("./../images/menuBackground.gif");
+    height: 49px;
+    font-size: 25px;
+    text-align: center;
+}
+
+#banner {
+    padding-bottom: 10px;
+}
+
+.kol_lewa {
+    width: 65%;
+    float: left;
+    padding-right: 20px;
+    border-right: 2px solid white;
+}
+
+.kol_praw {
+    width: 30%;
+    float: right;
+}
+
+.czysc {
+    clear: both;
+}
+
+.floaright {
+    float: right;
+    margin: 10px 10px 80px 10px;
+    border: 1px solid white;
+    padding: 5px;
+}
+
+#footer {
+    text-align: center;
+    font-size: 10px;
+    margin-top: 20px;
+    padding: 5px;
+    background-image: url("./../images/footerBackground.gif");
+    height: 58px;
+}
+
+.footer_link {
+    color: white;
+    text-decoration: underline;
+}
+.nav_praw ul li{
+    margin-bottom: 5px;
+}
+.nav_praw ul li a:hover{
+    padding-left: 10px;
+    color:yellow;
+}
+.nav_praw ul li a:link, .nav_praw ul li a:visited, p a:hover, p a:visited, p a:link{
+    color:yellow;
+}
+.nav_praw{
+    list-style-image: url("./../images/punkt.jpg");
+}
